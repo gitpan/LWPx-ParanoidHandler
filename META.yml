@@ -20,7 +20,7 @@ no_index:
 provides:
   LWPx::ParanoidHandler:
     file: lib/LWPx/ParanoidHandler.pm
-    version: 0.01
+    version: 0.02
   Net::DNS::Paranoid:
     file: lib/Net/DNS/Paranoid.pm
     version: 0
@@ -29,4 +29,4 @@ requires:
   parent: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02
