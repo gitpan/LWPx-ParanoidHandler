@@ -18,7 +18,7 @@ DESCRIPTION
     LWPx::ParanoidHandler is clever firewall for LWP::UserAgent. This module
     provides a handler to protect a request to internal servers.
 
-    It's useful to implement OAuth servers, crawlers, etc.
+    It's useful to implement OpenID servers, crawlers, etc.
 
 FUNCTIONS
     make_paranoid($ua[, $dns]);
