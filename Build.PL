@@ -12,11 +12,10 @@ my $build = Module::Build->new(
     },
     configure_requires   => { 'Module::Build' => '0.38' },
     requires             => {
-        'Exporter'                      => '0',
+        # 'Exporter'                      => '0',
         'parent'                        => '0',
-        perl                            => '5.010001',
-        'Net::DNS::Paranoid'            => '0.04',
-        'LWP'                           => 6,
+        'Class::Accessor::Lite' => 0,
+        # 'Plack'                         => '0.9949',
     },
 
     no_index    => { 'directory' => [ 'inc' ] },
