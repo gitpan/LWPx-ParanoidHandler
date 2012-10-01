@@ -32,19 +32,18 @@
       },
       "runtime" : {
          "requires" : {
-            "Class::Accessor::Lite" : "0",
-            "parent" : "0"
+            "Exporter" : "0",
+            "LWP" : "6",
+            "Net::DNS::Paranoid" : "0.07",
+            "parent" : "0",
+            "perl" : "5.010001"
          }
       }
    },
    "provides" : {
       "LWPx::ParanoidHandler" : {
          "file" : "lib/LWPx/ParanoidHandler.pm",
-         "version" : "0.03"
-      },
-      "Net::DNS::Paranoid" : {
-         "file" : "lib/Net/DNS/Paranoid.pm",
-         "version" : 0
+         "version" : "0.05"
       }
    },
    "release_status" : "stable",
@@ -53,5 +52,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.03"
+   "version" : "0.05"
 }
