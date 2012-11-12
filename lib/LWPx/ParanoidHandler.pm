@@ -2,7 +2,7 @@ package LWPx::ParanoidHandler;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 use parent qw/Exporter/;
 use Net::DNS::Paranoid;
 
@@ -73,6 +73,31 @@ It's useful to implement OpenID servers, crawlers, etc.
 Make your LWP::UserAgent instance to paranoid.
 
 The $dns argument is instance of L<Net::DNS::Paranoid>. It's optional.
+
+=back
+
+=head1 FAQ
+
+=over 4
+
+=item How can I timeout per request?
+
+Yes, L<LWP::UserAgent> does not timeouts per request.
+
+I think it's my job. But L<LWPx::ParanoidAgent> do this.
+
+You can do this by following form using alarm():
+
+    my $res = eval {
+        local $SIG{ALRM} = sub { die "ALRM\n" };
+        alarm(10);
+        my $res = $ua->get($url);
+        alarm(0);
+        $res;
+    };
+    $res = HTTP::Response->new(500, 'Timeout') unless $res;
+
+And I recommend to use L<Furl>. Furl can handle per-request timeout cleanly.
 
 =back
 
