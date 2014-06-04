@@ -1,5 +1,10 @@
 Revision history for Perl extension LWPx::ParanoidHandler
 
+0.07 2014-06-04T03:39:17Z
+
+    - Fixed dependencies
+    - Fixed testing issue.
+
 0.06
     
     [NO FEATURE CHANGES]
